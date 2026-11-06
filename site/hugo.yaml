@@ -19,11 +19,11 @@ module:
     target: i18n
   - source: archetypes
     target: archetypes
-  - source: ../../node_modules/flag-icons/flags
+  - source: node_modules/flag-icons/flags
     target: static/flags
-  - source: ../../node_modules/@fontsource/mulish/files
+  - source: node_modules/@fontsource/mulish/files
     target: static/files
-  - source: ../../node_modules/katex/dist/fonts
+  - source: node_modules/katex/dist/fonts
     target: static/fonts
 params:
   newsletter:
