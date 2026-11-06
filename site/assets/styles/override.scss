@@ -13,3 +13,33 @@
 //     display: block;
 //   }
 // }
+/* Keyboard focus visibility */
+:is(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid #0e7490 !important;
+  outline-offset: 3px;
+}
+
+/* Focus visibility on dark backgrounds */
+html[data-theme="dark"]
+  :is(a, button, input, select, textarea, [tabindex]):focus-visible,
+.transparent-navbar :is(a, button):focus-visible {
+  outline-color: #facc15 !important;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  html *,
+  html *::before,
+  html *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .ityped-cursor,
+  .ti-cursor {
+    display: none !important;
+  }
+}
