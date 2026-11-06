@@ -600,6 +600,9 @@ def fix_public_paths(public, base):
             return value, None
         absolute = urllib.parse.urljoin(base.rstrip('/') + '/' + current, html.unescape(value))
         parsed = urllib.parse.urlsplit(absolute)
+        if value.startswith(("http://", "https://")) and parsed.netloc == host:
+            if prefix and not (parsed.path == prefix or parsed.path.startswith(prefix + "/")):
+                return value, None
         if parsed.netloc != host or parsed.scheme not in ('http', 'https'):
             return value, None
         path = urllib.parse.unquote(parsed.path)
