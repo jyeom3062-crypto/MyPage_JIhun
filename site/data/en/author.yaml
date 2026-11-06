@@ -6,11 +6,7 @@ greeting: "안녕하세요, 저는"
 image: "/images/default-avatar.png"
 # give your some contact information. they will be used in the footer
 contactInfo:
-  email: 
-  phone:  
   github: jyeom3062-crypto
-  linkedin: 
-  researchgate: 
 
 # some summary about what you do
 summary:

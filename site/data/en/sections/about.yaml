@@ -23,10 +23,6 @@ summary: '컴퓨터 공학과 인공지능을 공부하며 다양한 프로그�
 # your social links
 # give as many as you want. use font-awesome for the icons.
 socialLinks:
-- name: Email
-  icon: "fas fa-envelope"
-  url: "example@gmail.com"
-
 - name: Github
   icon: "fab fa-github"
   url: "https://github.com/jyeom3062-crypto"
