@@ -17,23 +17,24 @@ buttons:
 projects:
 - name: "TMDB 영화 정보 웹사이트"
   image: "/images/projects/movie-lab.png"
-  role: "개인 개발 및 배포"
+  role: "Vue 프로젝트 실습 및 배포"
   timeline: "2026.10"
-  repo: "https://github.com/jyeom3062-crypto/movie-lab"
+  repo: "https://github.com/jyeom3062-crypto/movie-lab-actions"
+  demo: "https://jyeom3062-crypto.github.io/movie-lab/"
+
   summary: >-
-      목적: 외부 영화 API를 활용해 영화 정보를 표시하는
-      웹사이트를 구현하는 프로젝트입니다.
+    수업에서 제공된 Vue 프로젝트를 기반으로 TMDB API를
+    연동한 영화 정보 웹사이트를 실습했습니다.
+    인기 영화 목록, 제목 검색, 페이지 이동 기능을 통해
+    영화 포스터, 평점, 개봉일 및 줄거리를 확인할 수 있습니다.
+    빌드 결과물을 GitHub Pages에 배포하고,
+    GitHub Actions를 이용한 자동 배포 과정도 실습했습니다.
+    이를 통해 Vue의 반응형 데이터 처리, REST API 요청,
+    정적 웹사이트 배포와 CI/CD의 기본 구조를 학습했습니다.
+    향후 장르별 필터링과 즐겨찾기 기능을 추가하고 싶습니다.
 
-      수행 과정: Vue를 활용해 화면을 구성하고 TMDB API를
-      연동했습니다. 이후 프로젝트를 빌드하여 GitHub Pages에
-      게시하고, GitHub Actions를 통한 자동 배포도 경험했습니다.
-
-      결과 및 학습: 정적 웹사이트 배포와 자동화 워크플로의
-      차이를 이해하고 GitHub를 활용한 개발 과정을 익혔습니다.
-
-      개선 계획: 영화 검색 및 사용자 편의 기능을 확장하고 싶습니다.
   tags:
-    - "course"
     - "Vue"
+    - "JavaScript"
     - "TMDB API"
-    - "GitHub Pages"
+    - "GitHub Actions"
