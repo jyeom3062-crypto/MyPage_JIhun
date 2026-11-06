@@ -76,15 +76,32 @@
           </div>
           {{ end }}
           <div class="project-btn-holder">
-            {{ if .repo }}
-            <!-- Place this tag where you want the button to render. -->
-            <a class="github-button project-btn d-none" href="{{ .repo }}" data-icon="octicon-standard"
-              data-show-count="true" aria-label="Star {{ .name }}">{{ i18n "project_star" }}</a>
-            {{ else if .url }}
-            <span>
-              <a class="btn btn-outline-info btn-sm" href="{{ .url }}" target="{{ $targetAttr }}" rel="noopener">{{ i18n "project_details" }}</a>
-            </span>
-            {{ end }}
+  {{ with .demo }}
+    <a class="btn btn-outline-info btn-sm"
+       href="{{ . }}"
+       target="_blank"
+       rel="noopener">
+      사이트 보기
+    </a>
+  {{ end }}
+
+  {{ with .repo }}
+    <a class="btn btn-outline-info btn-sm"
+       href="{{ . }}"
+       target="_blank"
+       rel="noopener">
+      소스 코드
+    </a>
+  {{ end }}
+
+  {{ if and (not .demo) (not .repo) .url }}
+    <a class="btn btn-outline-info btn-sm"
+       href="{{ .url }}"
+       target="{{ $targetAttr }}"
+       rel="noopener">
+      {{ i18n "project_details" }}
+    </a>
+  {{ end }}
           </div>
         </div>
       </div>
