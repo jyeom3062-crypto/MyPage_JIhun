@@ -1,0 +1,38 @@
+# section information
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+
+# your projects
+projects:
+- name: "TMDB 영화 정보 웹사이트"
+  role: "개인 개발 및 배포"
+  timeline: "2026.10"
+  repo: "https://github.com/jyeom3062-crypto/movie-lab"
+  summary: >-
+      목적: 외부 영화 API를 활용해 영화 정보를 표시하는
+      웹사이트를 구현하는 프로젝트입니다.
+
+      수행 과정: Vue를 활용해 화면을 구성하고 TMDB API를
+      연동했습니다. 이후 프로젝트를 빌드하여 GitHub Pages에
+      게시하고, GitHub Actions를 통한 자동 배포도 경험했습니다.
+
+      결과 및 학습: 정적 웹사이트 배포와 자동화 워크플로의
+      차이를 이해하고 GitHub를 활용한 개발 과정을 익혔습니다.
+
+      개선 계획: 영화 검색 및 사용자 편의 기능을 확장하고 싶습니다.
+  tags:
+    - "course"
+    - "Vue"
+    - "TMDB API"
+    - "GitHub Pages"
