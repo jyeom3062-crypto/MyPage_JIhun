@@ -1,3 +1,5 @@
+import { Collapse } from 'bootstrap'
+
 const updateNavBar = () => {
   const topNavbar = document.getElementById('top-navbar')
   const navbarToggler = document.getElementById('navbar-toggler')
@@ -49,15 +51,13 @@ document.addEventListener('DOMContentLoaded', function () {
     updateNavBar()
   }
 
-  // Creates a click handler to collapse the navigation when
-  // anchors in the mobile nav pop up are clicked
-  const navMain = document.getElementsByClassName('navbar-collapse')
-  Array.from(navMain).forEach(function (el) {
-    el.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A' && !e.target.classList.contains("dropdown-toggle")) {
-        el.classList.add('collapse')
-        el.classList.remove('show')
-      }
-    })
+  // Close the mobile menu with Bootstrap's API so aria-expanded
+  // and the transition state stay in sync with the visible menu.
+  const mobileNav = document.getElementById('top-nav-items')
+  mobileNav?.addEventListener('click', function (event) {
+    const link = event.target.closest('a')
+    if (link && !link.classList.contains('dropdown-toggle') && mobileNav.classList.contains('show')) {
+      Collapse.getOrCreateInstance(mobileNav).hide()
+    }
   })
 })
