@@ -1,0 +1,23 @@
+section:
+  name: Interests & Goals
+  id: interests-goals
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  template: sections/interests-goals.html
+
+interests:
+  - name: "웹 서비스 개발"
+    reason: "Vue와 외부 API를 활용해 실제로 동작하는 웹사이트를 만들어 보면서 웹 개발에 관심을 갖게 되었습니다."
+
+  - name: "알고리즘과 자료구조"
+    reason: "문제를 해결하는 여러 방법을 비교하고 더 효율적인 알고리즘을 찾는 과정에 흥미가 있습니다."
+
+  - name: "AI 기술"
+    reason: "인공지능이 실제 소프트웨어와 서비스에 어떻게 활용되는지 배우고 싶습니다."
+
+goals:
+  - "Vue와 TypeScript를 활용해 완성도 높은 웹서비스 제작하기"
+  - "Firebase Firestore를 활용해 데이터 저장과 관리 기능 구현하기"
+  - "Git과 GitHub를 활용한 협업 및 버전 관리 능력 향상하기"
+  - "알고리즘과 자료구조에 대한 이해를 실제 프로젝트에 적용하기"

@@ -1,0 +1,40 @@
+<div class="container-fluid anchor pb-5" id="{{ .section.id }}">
+  <h1 class="text-center pt-4">{{ .section.name }}</h1>
+
+  <div class="container">
+    <div class="row g-3">
+
+      <div class="col-12 col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="h4">관심 분야</h2>
+
+            <ul>
+              {{ range .interests }}
+              <li class="mb-3">
+                <strong>{{ .name }}</strong>
+                <p>{{ .reason }}</p>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="h4">학습 목표</h2>
+
+            <ul>
+              {{ range .goals }}
+              <li class="mb-3">{{ . }}</li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
