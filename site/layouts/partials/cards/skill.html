@@ -1,7 +1,11 @@
 <div class="col-xs-12 col-sm-6 col-lg-4 pt-2 filtr-item"
   data-category='all, {{ with .categories }}{{ delimit . ","}}{{ end }}'
 >
-  <a class="text-decoration-none" {{ if .url }}href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener"{{ end }}>
+  {{ if .url }}
+  <a class="text-decoration-none" href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener">
+  {{ else }}
+  <div class="text-decoration-none">
+  {{ end }}
     <div class="card">
       <div class="card-head d-flex">
         {{ if .logo }}
@@ -24,5 +28,9 @@
         <p class="card-text">{{ .summary | markdownify }}</p>
       </div>
     </div>
+  {{ if .url }}
   </a>
+  {{ else }}
+  </div>
+  {{ end }}
 </div>
