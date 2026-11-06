@@ -28,3 +28,5 @@ module:
 params:
   newsletter:
     enable: false
+  logo:
+    favicon: "images/favicon.png"
