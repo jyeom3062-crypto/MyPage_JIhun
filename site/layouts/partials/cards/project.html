@@ -1,10 +1,17 @@
 <div class="col-sm-12 col-md-6 col-lg-4 p-2 filtr-item" data-category='all, {{ delimit  .tags ","}}'>
   <div class="card mt-1">
     {{- $target := .target | default "blank" -}}
-      {{- $targetAttr := "_blank" -}}
-      {{- if eq $target "self" -}}{{- $targetAttr = "_self" -}}{{- end -}}
-      <a href="{{ if .repo }}{{ .repo }}{{ else if .url }}{{ .url }}{{ else }}javascript:void(0){{ end }}" {{ if or
-        .repo .url }}target="{{ $targetAttr }}" rel="noopener" {{ end }}>
+    {{- $targetAttr := "_blank" -}}
+    {{- if eq $target "self" -}}
+      {{- $targetAttr = "_self" -}}
+    {{- end -}}
+
+    {{ if or .repo .url }}
+    <a href="{{ .repo | default .url }}"
+      target="{{ $targetAttr }}"
+      rel="noopener noreferrer"
+      aria-label="{{ .name }} 프로젝트 정보{{ if eq $targetAttr "_blank" }} (새 탭에서 열림){{ end }}">
+    {{ end }}
         {{ if .image }}
         <div class="card-head">
           {{ $imageImage:= resources.Get .image}}
@@ -44,7 +51,7 @@
 
               {{ end }}
 
-              <h5 class="card-title mb-0">{{ .name }}</h5>
+              <h2 class="card-title h5 mb-0">{{ .name }}</h2>
             </div>
             <div class="sub-title">
               <span>{{ .role }}</span>
@@ -52,7 +59,9 @@
             </div>
           </div>
         </div>
+      {{ if or .repo .url }}
       </a>
+      {{ end }}
       <div class="card-body pt-3 pb-3">
         <div class="project-summary">
           <p>{{ .summary }}</p>
