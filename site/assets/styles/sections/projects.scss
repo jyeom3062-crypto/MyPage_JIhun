@@ -98,3 +98,84 @@ html[data-theme='dark'] {
     }
   }
 }
+
+/* Improved project card readability */
+.projects-section {
+  .project-summary {
+    font-size: 1rem;
+    line-height: 1.8;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+
+    p {
+      margin-bottom: 0.9rem;
+    }
+  }
+
+  .project-details {
+    margin: 0.75rem 0 1.25rem;
+
+    > summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: get-light-color('accent-color');
+      padding: 0.6rem 0;
+    }
+
+    .project-details-content {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background: get-light-color('bg-primary');
+
+      p {
+        margin-bottom: 0.8rem;
+      }
+
+      ul {
+        padding-left: 1.4rem;
+        margin-bottom: 1rem;
+      }
+
+      li {
+        margin-bottom: 0.3rem;
+      }
+    }
+  }
+
+  .project-card-footer {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .project-tags-holder {
+    width: auto;
+    flex: 1 1 12rem;
+  }
+
+  .project-btn-holder {
+    width: auto;
+    flex: 1 1 11rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    .btn {
+      white-space: nowrap;
+    }
+  }
+}
+
+html[data-theme='dark'] {
+  .projects-section {
+    .project-details {
+      > summary {
+        color: get-dark-color('hover-over-accent-color');
+      }
+
+      .project-details-content {
+        background: get-dark-color('bg-primary');
+      }
+    }
+  }
+}
