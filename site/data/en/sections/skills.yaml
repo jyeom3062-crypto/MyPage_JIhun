@@ -1,0 +1,24 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  filter: false
+
+ skills:
+  - name: C++
+    summary: "객체지향 프로그래밍과 자료구조를 학습하고 알고리즘 문제 해결에 활용했습니다."
+
+  - name: Python
+    summary: "알고리즘 구현과 자료 처리에 활용하고 있습니다."
+
+  - name: Java
+    summary: "클래스, 상속, 다형성 등 객체지향 프로그래밍의 핵심 개념을 학습했습니다."
+
+  - name: Git & GitHub
+    summary: "커밋, 브랜치, 병합, 원격 저장소 관리 및 GitHub Actions 배포를 경험했습니다."
+
+  - name: Vue & JavaScript
+    summary: "Vue를 활용해 외부 API 데이터를 화면에 표시하는 웹 프로젝트를 진행했습니다."
