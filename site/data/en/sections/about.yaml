@@ -8,7 +8,7 @@ section:
   template: sections/about.html
 
 # your designation
-designation: CSAI Sophomore
+designation: "컴퓨터공학·AI 전공 2학년"
 # your company information
 country:
   name: South Korea
@@ -18,7 +18,22 @@ country:
 # resume: "files/resume.pdf"
 
 # a summary about you
-summary: '컴퓨터 공학과 인공지능을 공부하며 다양한 프로그래밍 기술을 학습하고 있습니다.'
+summary: >-
+  컴퓨터공학과 인공지능을 전공하며
+  프로그래밍, 자료구조, 알고리즘을 공부하고 있습니다.
+
+  C++와 Python으로 자료구조와 알고리즘을 학습하고,
+  Java로 객체지향 프로그래밍의 핵심 개념을
+  익혔습니다.
+
+  최근에는 Vue 기반 웹 프로젝트를 빌드·배포하고,
+  Hugo와 GitHub Actions를 활용해 개인
+  포트폴리오 웹사이트를 제작하면서
+  웹 개발과 배포 과정을 경험하고 있습니다.
+
+  앞으로는 TypeScript와 Firebase를 학습해
+  데이터 저장 기능을 갖춘 웹서비스를
+  직접 구현하는 것을 목표로 하고 있습니다.
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
