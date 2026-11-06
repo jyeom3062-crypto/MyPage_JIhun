@@ -12,8 +12,8 @@ default (index hugo.Data site.Language.Lang).site.description }}
   <meta property="og:image" content="{{ index . 0 | absURL }}">
 {{- else -}}
   {{- $image := (index hugo.Data site.Language.Lang).site.openGraph.image | default (index hugo.Data site.Language.Lang).author.image }}
-  {{- with $image }}
-    <meta property="og:image" content="{{ . | absURL }}">
+  {{- with resources.Get $image }}
+    <meta property="og:image" content="{{ .Permalink }}">
   {{ end -}}
 {{- end -}}
 <meta property="og:url" content="{{ $url }}">
