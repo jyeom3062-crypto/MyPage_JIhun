@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if ($ul == null || $ul.length === 0) return
 
   const strings = Array.from($ul).map($el => $el.textContent)
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const typed = document.getElementById('typed')
+  if (typed) {
+    typed.textContent = strings[0] || ''
+  }
+  return
+}
 
   let typeItInstance = new TypeIt('#typed', {
     speed: 100,
