@@ -8,11 +8,6 @@ section:
   # Can optionally hide the title in sections
   # hideTitle: true
 
-# filter buttons
-buttons:
-- name: All
-  filter: "all"
-
 # your projects
 projects:
 - name: "TMDB 영화 정보 웹사이트"
