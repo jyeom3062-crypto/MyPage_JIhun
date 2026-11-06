@@ -54,8 +54,19 @@
           </div>
         </div>
       </a>
-      <div class="card-body text-justify pt-1 pb-2">
-        <p>{{ .summary | markdownify }}</p>
+      <div class="card-body pt-3 pb-3">
+        <div class="project-summary">
+          <p>{{ .summary }}</p>
+
+          {{ with .details }}
+          <details class="project-details">
+            <summary>주요 기능 및 개발 과정 자세히 보기</summary>
+            <div class="project-details-content">
+              {{ . | markdownify }}
+            </div>
+          </details>
+          {{ end }}
+        </div>
         <!-- Display project card technology tags -->
         <div class="project-card-footer">
           {{ if .tags }}
