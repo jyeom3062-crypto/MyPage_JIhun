@@ -1,0 +1,17 @@
+navBarTitle: "JIHUN"
+
+description: "컴퓨터공학과 인공지능을 공부하는 학생의 개인 포트폴리오입니다."
+
+copyright: "© 2026 JIHUN. All rights reserved."
+
+customMenus:
+  - name: GitHub
+    url: "https://github.com/jyeom3062-crypto"
+    hideFromNavbar: false
+    showOnFooter: true
+
+openGraph:
+  title: "JIHUN | Portfolio"
+  type: website
+  description: "JIHUN의 개발 기술과 프로젝트를 소개하는 포트폴리오"
+  image: "/images/default-avatar.png"
