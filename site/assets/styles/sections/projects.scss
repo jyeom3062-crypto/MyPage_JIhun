@@ -13,14 +13,12 @@
         color: get-light-color('muted-text-color');
         margin-top: 0.4rem;
 
-        span {
-          &:nth-child(1) {
-            float: left;
-          }
-          &:nth-child(2) {
-            float: right;
-          }
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        column-gap: 0.75rem;
+        row-gap: 0.3rem;
       }
     }
 
