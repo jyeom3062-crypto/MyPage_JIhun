@@ -112,3 +112,21 @@ html[data-theme='dark'] {
     background-color: get-dark-color('highlight-color');
   }
 }
+
+/* Visible keyboard focus for navigation and interactive controls. */
+a[href]:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[role='button']:focus-visible {
+  outline: 3px solid get-light-color('accent-color') !important;
+  outline-offset: 3px;
+}
+
+html[data-theme='dark'] {
+  a[href]:focus-visible,
+  button:focus-visible,
+  summary:focus-visible,
+  [role='button']:focus-visible {
+    outline-color: get-dark-color('hover-over-accent-color') !important;
+  }
+}
