@@ -188,3 +188,45 @@ html[data-theme='dark'] {
     margin-right: auto;
   }
 }
+
+/* Technology tags */
+.projects-section {
+  .project-tags-holder {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .project-tag {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+
+    background-color: get-light-color('bg-secondary');
+    color: get-light-color('text-color');
+
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  a.project-tag {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+html[data-theme='dark'] {
+  .projects-section {
+    .project-tag {
+      background-color: get-dark-color('bg-primary');
+      color: get-dark-color('text-color');
+    }
+  }
+}

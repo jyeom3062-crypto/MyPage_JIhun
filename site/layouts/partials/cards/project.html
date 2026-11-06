@@ -79,18 +79,15 @@
         <div class="project-card-footer">
           {{ if .tags }}
           <div class="project-tags-holder">
-            {{ range $index,$tag:= .tags }}
-            {{ if $.linkTags }}
-            <a href="{{ printf "/tags/%s/" (urlize $tag) | relLangURL }}">
-              <span class="btn badge btn-info">
-                {{ $tag }}
-              </span>
-            </a>
-            {{ else }}
-            <span class="btn badge btn-info">
-              {{ $tag }}
-            </span>
-            {{ end }}
+            {{ range $index, $tag := .tags }}
+              {{ if $.linkTags }}
+                <a class="project-tag"
+                  href="{{ printf "/tags/%s/" (urlize $tag) | relLangURL }}">
+                  {{ $tag }}
+                </a>
+              {{ else }}
+                <span class="project-tag">{{ $tag }}</span>
+              {{ end }}
             {{ end }}
           </div>
           {{ end }}
