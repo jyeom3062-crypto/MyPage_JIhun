@@ -7,7 +7,7 @@ section:
   showOnNavbar: true
   filter: false
 
- skills:
+skills:
   - name: C++
     summary: "객체지향 프로그래밍과 자료구조를 학습하고 알고리즘 문제 해결에 활용했습니다."
 
