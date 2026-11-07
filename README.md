@@ -55,9 +55,9 @@ VS Code와 Git Bash는 편집 및 터미널 도구이며, Hugo 자체의 필수 
 | Node.js / npm | Node.js 24 (Actions 기준, npm 포함) | JavaScript 의존성 설치 · [공식 설치](https://nodejs.org/en/download) |
 | Go | 1.27.1 (Actions 기준) | Hugo 관련 Go 도구 지원 · [공식 설치](https://go.dev/dl/) |
 | Dart Sass | 1.105.0 (Actions 기준) | SCSS 컴파일 · [공식 설치](https://sass-lang.com/install/) |
-| Python | 3.12 (Actions 기준) | GitHub Pages 배포 보조 스크립트 실행 · [공식 설치](https://www.python.org/downloads/) |
+| Python | 3.13.7 (사용자 Windows 환경) / 3.12 (Actions 기준) | GitHub Pages 배포 보조 스크립트 실행 · [공식 설치](https://www.python.org/downloads/) |
 
-*VS Code·Git 버전은 Windows 사용 환경에서 확인한 값이고, 나머지 버전은 `.github/workflows/hugo-pages.yml`에 명시된 자동 빌드 환경 기준입니다. 모든 도구를 Windows에서 동일 버전으로 개별 설치했다는 뜻은 아닙니다.*
+*VS Code·Git·Python의 사용자 버전은 Windows 환경에서 확인한 값이며, Actions 버전은 `.github/workflows/hugo-pages.yml`에 명시된 자동 빌드 환경 기준입니다. 다른 도구의 Windows 설치 버전은 확인하지 않았습니다.*
 
 설치한 도구의 버전은 다음 명령어로 확인합니다. Hugo 출력에는 `extended`가 포함되어야 합니다.
 
