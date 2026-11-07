@@ -26,9 +26,16 @@
           <div class="card-body">
             <h2 class="h4">학습 목표</h2>
 
-            <ul>
+            <ul class="list-unstyled mb-0 ps-0">
               {{ range .goals }}
-              <li class="mb-3">{{ . }}</li>
+              <li class="border rounded-3 p-3 mb-3">
+                <span class="d-block small fw-bold mb-1">목표</span>
+                <h3 class="h6 mb-3">{{ .title }}</h3>
+                <div class="border-top pt-2">
+                  <span class="d-block small fw-bold mb-1">실행 계획</span>
+                  <p class="mb-0">{{ .plan }}</p>
+                </div>
+              </li>
               {{ end }}
             </ul>
           </div>
